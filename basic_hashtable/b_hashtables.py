@@ -25,7 +25,11 @@ class BasicHashTable:
 # Research and implement the djb2 hash function
 # '''
 def hash(string, max):
-    pass
+    sum = 5381
+    for i in range(0, len(string)):
+        sum = sum*33 + ord(string[i])
+    sum = sum % max
+    return sum
 
 
 # '''
